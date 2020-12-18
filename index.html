@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home work 5</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Завдання 1. Напишіть функцію, що повертає куб числа</legend>
+        <input type="number" placeholder="Введіть число" id="cubeValue">
+        <div id="cubeResult">Введіть число</div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Завдання 2. Напишіть функцію, що додає перше число до другого і ділить результат на третє число.
+        </legend>
+        <input type="number" placeholder="Введіть 1 число" id="firstNumber"
+            onkeypress="if(this.value.length === 3) return false;">
+        <input type="number" placeholder="Введіть 2 число" id="secondNumber"
+            onkeypress="if(this.value.length === 3) return false;">
+        <input type="number" placeholder="Введіть 3 число" id="thirdNumber"
+            onkeypress="if(this.value.length === 3) return false;">
+
+        <button id="threeNumberButton">Перевірити</button>
+        <div id="threeNumberResult"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Завдання 3. Напишіть функцію, що приймає число від 1 до 7 і повертає відповідну назву дня (українською).
+        </legend>
+
+        <input type="number" id="dayNumberValue" placeholder="Введіть цифру від 1 до 7"
+            onkeypress="if(this.value.length === 1) return false;">
+        <button id="dayNumberButton">Перевірити</button>
+        <div id="dayStringResult"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Завдання 4. Реалізуйте функцію знаходження факторіала.
+        </legend>
+
+        <input type="number" id="factorialValue" placeholder="Введіть число"
+            onkeypress="if(this.value.length === 1) return false;">
+        <button id="factorialButton">Перевірити</button>
+        <div id="factorialResult"></div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Завдання 5. Напишіть функцію яка отримує години хвилини та секунди і повертає це число в секундах.
+        </legend>
+
+        <input type="time" step="1" id="timeConverter" value="00:00:00">
+        <button id="timeConverterButton">Конвертувати</button>
+        <div id="timeConverterResult"></div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Завдання 6. Написати функцію , яка приймає секунди, і перетворює їх у години хвилини та секунди у
+            форматі «гг:хх:сс». якщо кількість годин більша за 23.59.59 - вивести повідомлення "Більше одного дня".
+        </legend>
+        <input type="number" min="0" id="secondConverter" value="00:00:00" placeholder="Введіть секунди">
+        <button id="secondConverterButton">Конвертувати</button>
+        <div id="secondConverterResult"></div>
+
+    </fieldset>
+
+
+    <script src=" script.js"></script>
+</body>
+
+</html>
