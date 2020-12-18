@@ -113,9 +113,7 @@ const timeConverter = time => {
 
     let [hours, minute, seconds] = time.split(':');
 
-    if (seconds === undefined) {
-        seconds = 0;
-    }
+    (seconds === undefined) ? seconds = 0: seconds;
 
     return ((parseInt(hours * 3600)) + parseInt(minute * 60) + parseInt(seconds));
 }
