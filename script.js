@@ -29,15 +29,19 @@ const threeNumberResult = document.getElementById('threeNumberResult');
 const threeNumberButton = document.getElementById('threeNumberButton');
 
 const threeNumberAddDiv = (first, second, third) => {
-    if (first === '' || second === '' || third === '') {
-        ResultFunction(threeNumberResult, 'Помилка! Введіть коректні числа');
-    } else {
-        ResultFunction(threeNumberResult, `Результат: ${(parseFloat(first) + parseFloat(second)) / parseFloat(third)}`);
-    }
+
+    return (parseFloat(first) + parseFloat(second)) / parseFloat(third);
+
 }
 
 threeNumberButton.addEventListener('click', function () {
-    threeNumberAddDiv(firstNumber.value, secondNumber.value, thirdNumber.value);
+
+    if (firstNumber.value === '' || secondNumber.value === '' || thirdNumber.value === '') {
+        ResultFunction(threeNumberResult, 'Помилка! Введіть коректні числа');
+    } else {
+        ResultFunction(threeNumberResult, `Результат: ${threeNumberAddDiv(firstNumber.value, secondNumber.value, thirdNumber.value)}`);
+    }
+
 });
 
 /*----------------------Завдання 3----------------------*/
@@ -49,35 +53,27 @@ const dayStringResult = document.getElementById('dayStringResult');
 const dayNumberToString = number => {
     switch (parseInt(number)) {
         case 1:
-            ResultFunction(dayStringResult, 'понеділок');
-            break;
+            return 'понеділок';
         case 2:
-            ResultFunction(dayStringResult, 'вівторок');
-            break;
+            return 'вівторок';
         case 3:
-            ResultFunction(dayStringResult, 'середа');
-            break;
+            return 'середа';
         case 4:
-            ResultFunction(dayStringResult, 'четвер');
-            break;
+            return 'четвер';
         case 5:
-            ResultFunction(dayStringResult, 'п\'ятниця');
-            break;
+            return 'п\'ятниця';
         case 6:
-            ResultFunction(dayStringResult, 'субота');
-            break;
+            return 'субота';
         case 7:
-            ResultFunction(dayStringResult, 'неділя');
-            break;
+            return 'неділя';
         default:
-            ResultFunction(dayStringResult, 'Помилка! Введіть коректне число');
-            break;
+            return 'Помилка! Введіть коректне число';
 
     }
 }
 
 dayNumberButton.addEventListener('click', function () {
-    dayNumberToString(dayNumberValue.value);
+    ResultFunction(dayStringResult, dayNumberToString(dayNumberValue.value));
 });
 
 /*----------------------Завдання 4----------------------*/

@@ -34,7 +34,7 @@
         <legend>Завдання 3. Напишіть функцію, що приймає число від 1 до 7 і повертає відповідну назву дня (українською).
         </legend>
 
-        <input type="number" id="dayNumberValue" placeholder="Введіть цифру від 1 до 7"
+        <input type="number" id="dayNumberValue" min="0" placeholder="Введіть цифру від 1 до 7"
             onkeypress="if(this.value.length === 1) return false;">
         <button id="dayNumberButton">Перевірити</button>
         <div id="dayStringResult"></div>
