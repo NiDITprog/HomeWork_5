@@ -110,7 +110,13 @@ const timeConverterButton = document.getElementById('timeConverterButton');
 const timeConverterResult = document.getElementById('timeConverterResult');
 
 const timeConverter = time => {
+
     let [hours, minute, seconds] = time.split(':');
+
+    if (seconds === undefined) {
+        seconds = 0;
+    }
+
     return ((parseInt(hours * 3600)) + parseInt(minute * 60) + parseInt(seconds));
 }
 
