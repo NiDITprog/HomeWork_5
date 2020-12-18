@@ -28,11 +28,7 @@ const thirdNumber = document.getElementById('thirdNumber');
 const threeNumberResult = document.getElementById('threeNumberResult');
 const threeNumberButton = document.getElementById('threeNumberButton');
 
-const threeNumberAddDiv = (first, second, third) => {
-
-    return (parseFloat(first) + parseFloat(second)) / parseFloat(third);
-
-}
+const threeNumberAddDiv = (first, second, third) => (parseFloat(first) + parseFloat(second)) / parseFloat(third);
 
 threeNumberButton.addEventListener('click', function () {
 
@@ -82,13 +78,7 @@ const factorialValue = document.getElementById('factorialValue');
 const factorialButton = document.getElementById('factorialButton');
 const factorialResult = document.getElementById('factorialResult');
 
-const factorial = value => {
-    if (value > 0) {
-        return value * factorial(value - 1);
-    } else {
-        return 1;
-    }
-}
+const factorial = value => (value > 0) ? value * factorial(value - 1) : 1;
 
 factorialButton.addEventListener('click', function () {
     if (parseInt(factorialValue.value) < 0 || factorialValue.value === '') {
@@ -124,9 +114,7 @@ const second = document.getElementById('secondConverter');
 const secondConverterButton = document.getElementById('secondConverterButton');
 const secondConverterResult = document.getElementById('secondConverterResult');
 
-const checkTime = i => {
-    return (i < 10) ? '0' + i : i;
-}
+const checkTime = i => (i < 10) ? '0' + i : i;
 
 const secondConverter = second => {
     let hours = Math.floor(second / 60 / 60);
